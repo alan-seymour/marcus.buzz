@@ -44,7 +44,7 @@
   <body>
     <div class="container">
       <h1>
-        It has been <span id="daysSince">0</span> days since Marcus was stung by
+        It has been <span id="daysSince">0</span> <span id="daysText">days</span> since Marcus was stung by
         a bee.
       </h1>
       <img src="https://i.imgur.com/JN28wy2.gif" />
@@ -54,6 +54,9 @@
       const now = new Date();
       const timeDiff = now.getTime() - stungDate.getTime();
       const days = Math.floor(timeDiff / (1000 * 3600 * 24));
+      if (days === 1) {
+        document.getElementId("daysText").innerHTML = 'day';
+      }
       document.getElementById("daysSince").innerHTML = days;
     </script>
   </body>
