@@ -55,7 +55,7 @@
       const timeDiff = now.getTime() - stungDate.getTime();
       const days = Math.floor(timeDiff / (1000 * 3600 * 24));
       if (days === 1) {
-        document.getElementId("daysText").innerHTML = 'day';
+        document.getElementById("daysText").innerHTML = 'day';
       }
       document.getElementById("daysSince").innerHTML = days;
     </script>
